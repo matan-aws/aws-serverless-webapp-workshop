@@ -6,11 +6,13 @@ date = 2019-09-09T17:42:10+01:00
 weight = 50
 +++
 
-### 5. Update the Website Config
+### 6. Update the Website Config
 Update the _/src/config.js_ file in your website deployment to include the invoke URL of the stage you just created. You should copy the invoke URL directly from the top of the stage editor page on the Amazon API Gateway console and paste it into the _\_config.api.invokeUrl_ key of your site's _/src/config.js_ file. Make sure when you update the config file it still contains the updates you made in the previous module for your Cognito user pool.
 
 **:white_check_mark: Step-by-step directions**
 
+1. Copy the endpoint URL from your API details 
+![Endpoint](/images/endpoint-url.png)
 1. On your Cloud9 development environment open `src/config.js`
 1. Update the **invokeUrl** setting under the **api** key in the config.js file. Set the value to the **Invoke URL** for the deployment stage your created in the previous section.
 
@@ -20,7 +22,7 @@ An example of a complete `config.js` file is included below.
 ```JavaScript
 module.exports = {
     api: {
-        invokeUrl: 'https://rfk14x9w40.execute-api.us-east-1.amazonaws.com/prod'
+        invokeUrl: 'https://rfk14x9w40.execute-api.us-east-1.amazonaws.com/'
     }
 }
 ```
